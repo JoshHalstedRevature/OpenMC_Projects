@@ -122,7 +122,7 @@ cell_filter = openmc.CellFilter(fuel)
 tally = openmc.Tally(1)
 tally.filters = [cell_filter]
 
-tally.nucldes = ['U235']
+tally.nuclides = ['U235']
 tally.scores = ['total', 'fission', 'absorption', '(n,gamma)']
 
 tallies = openmc.Tallies([tally])

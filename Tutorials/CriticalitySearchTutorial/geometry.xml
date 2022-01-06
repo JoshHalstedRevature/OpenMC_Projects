@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<geometry>
+  <cell id="28" material="28" name="1.6% Fuel" region="-55" universe="10" />
+  <cell id="29" material="29" name="1.6% Clad" region="55 -56" universe="10" />
+  <cell id="30" material="30" name="1.6% Moderator" region="56 57 -58 59 -60" universe="10" />
+  <surface coeffs="0.0 0.0 0.39218" id="55" type="z-cylinder" />
+  <surface coeffs="0.0 0.0 0.4572" id="56" type="z-cylinder" />
+  <surface boundary="reflective" coeffs="-0.63" id="57" type="x-plane" />
+  <surface boundary="reflective" coeffs="0.63" id="58" type="x-plane" />
+  <surface boundary="reflective" coeffs="-0.63" id="59" type="y-plane" />
+  <surface boundary="reflective" coeffs="0.63" id="60" type="y-plane" />
+</geometry>
