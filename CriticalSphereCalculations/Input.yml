@@ -1,0 +1,29 @@
+Problem:
+    Type: "search_for_keff"
+    ProblemName: "Neptunium237"
+    Geometry: 
+        Cell:
+            Name: 'cell'
+            Fill: 'nep'
+            Mixture: 'No'
+            BCs:
+                BC1:
+                    Type: 'vacuum'
+    Material:
+        Name: 'nep'
+        Isotope: 'Np237'
+        Atom_Fraction: 1.0
+        Density: 
+            Value: 20.25
+            Units: 'g/cm3'
+    Source:
+        Type: "Point"
+        Location:
+            x: 0
+            y: 0
+            z: 0
+    Settings:
+        Batches: 500
+        Inactive: 100
+        Particles: 5000
+        

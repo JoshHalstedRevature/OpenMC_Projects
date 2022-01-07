@@ -8,14 +8,18 @@ import scipy.stats
 import numpy as np
 import pandas as pd
 import openmc
+import pathlib
+from importlib.machinery import SourceFileLoader
 
-CURRENT_DIRECTORY = os.getcwd()
-print(CURRENT_DIRECTORY)
-try:
-    os.chdir("%s/Tutorials/PostProcessing"%(CURRENT_DIRECTORY))
-except FileNotFoundError:
-    os.system("pwd")
+FILE_DIRECTORY = str(pathlib.Path(__file__).parent.absolute())
+PARENT_DIRECTORY = FILE_DIRECTORY.split('/')[-1]
+PROJECT_DIRECTORY = FILE_DIRECTORY.split(PARENT_DIRECTORY)[0]
+INPUT_FILE = os.path.join(PARENT_DIRECTORY, "Input.yml")
 
+mymodule = SourceFileLoader('UsefulFunctions', '%s/UsefulFunctions/UsefulFunctions.py'%(PROJECT_DIRECTORY)).load_module()
+mymodule.ChangeDirectory()
+dictionary = mymodule.LoadYaml2Dictionary(INPUT_FILE)
+print(dictionary)
 
 # 1.6 enriched fuel
 

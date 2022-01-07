@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<materials>
+  <material depletable="true" id="1" name="nep">
+    <density units="g/cm3" value="20.25" />
+    <nuclide ao="1.0" name="Np237" />
+  </material>
+</materials>
